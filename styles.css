@@ -348,6 +348,45 @@ a {
   font-size: 2rem;
 }
 
+.success-pot {
+  position: relative;
+  width: 112px;
+  margin: 0 auto 10px;
+}
+
+.success-pot img {
+  width: 100%;
+}
+
+.success-pot::before {
+  content: "";
+  position: absolute;
+  left: 37.4%;
+  top: 51.1%;
+  width: 26%;
+  height: 6.9%;
+  background: #fffbe8;
+  border-radius: 40% 48% 45% 38%;
+  transform: rotate(-10deg);
+}
+
+.success-pot::after {
+  content: "Winnings";
+  position: absolute;
+  left: 35.2%;
+  top: 50.7%;
+  width: 31%;
+  color: var(--purple);
+  font-family: "Segoe Print", "Bradley Hand ITC", "Comic Sans MS", cursive;
+  font-size: 0.38rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transform: rotate(-10deg);
+}
+
+
+
 .success-panel p:not(.eyebrow) {
   color: var(--muted);
 }
