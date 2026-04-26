@@ -93,7 +93,7 @@ h2 {
   font-size: 1.02rem;
 }
 
-.winnings-spot {
+.winnings-pot {
   position: relative;
   display: grid;
   justify-items: center;
@@ -102,11 +102,11 @@ h2 {
   width: min(68vw, 250px);
 }
 
-.winnings-spot img {
+.winnings-pot img {
   width: 100%;
 }
 
-.winnings-spot::before {
+.winnings-pot::before {
   content: "";
   position: absolute;
   left: 37.4%;
@@ -118,7 +118,7 @@ h2 {
   transform: rotate(-10deg);
 }
 
-.winnings-spot::after {
+.winnings-pot::after {
   content: "Winnings";
   position: absolute;
   left: 35.2%;
@@ -160,6 +160,14 @@ h2 {
 .entry-form {
   display: grid;
   gap: 16px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .form-section,
