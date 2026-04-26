@@ -1,7 +1,7 @@
 const CONFIG = {
   appsScriptUrl: "https://script.google.com/macros/s/AKfycbxnCvGSPlXvyc6amfr78xL52S4yNhLmV0gdC9x-41q931Gr-2QBr2FdswFnXLYMCfDj/exec",
-  savingsBookingUrl: "https://tidycal.com/aqcroft/uwcost",
-  incomeBookingUrl: "https://tidycal.com/aqcroft/uwpresent",
+  savingsBookingUrl: "https://tidycal.com/aqcroft/uwpresent",
+  incomeBookingUrl: "https://tidycal.com/aqcroft/uwcost",
 };
 
 const form = document.querySelector("#entryForm");
@@ -66,14 +66,14 @@ function renderBookingActions(payload) {
   if (payload.savings === "yes") {
     bookingActions.insertAdjacentHTML(
       "beforeend",
-      `<a class="booking-button" href="${CONFIG.savingsBookingUrl}">Book a savings review</a>`
+      `<a class="booking-button" href="${CONFIG.savingsBookingUrl}" target="_blank" rel="noreferrer">Book a savings review</a>`
     );
   }
 
   if (payload.income === "yes") {
     bookingActions.insertAdjacentHTML(
       "beforeend",
-      `<a class="booking-button alt" href="${CONFIG.incomeBookingUrl}">Book an extra income chat</a>`
+      `<a class="booking-button alt" href="${CONFIG.incomeBookingUrl}" target="_blank" rel="noreferrer">Book an extra income chat</a>`
     );
   }
 
@@ -83,10 +83,6 @@ function renderBookingActions(payload) {
 }
 
 async function submitEntry(payload) {
-  if (!CONFIG.appsScriptUrl) {
-    throw new Error("The form endpoint has not been configured yet.");
-  }
-
   await fetch(CONFIG.appsScriptUrl, {
     method: "POST",
     mode: "no-cors",
@@ -118,7 +114,7 @@ form.addEventListener("submit", async (event) => {
     successPanel.hidden = false;
     form.reset();
   } catch (error) {
-    showMessage(error.message || "Something went wrong. Please try again.");
+    showMessage("Something went wrong. Please try again.");
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = "Submit entry";
