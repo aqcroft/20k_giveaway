@@ -1,5 +1,5 @@
 const CONFIG = {
-  appsScriptUrl: "",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxnCvGSPlXvyc6amfr78xL52S4yNhLmV0gdC9x-41q931Gr-2QBr2FdswFnXLYMCfDj/exec",
   savingsBookingUrl: "https://tidycal.com/aqcroft/uwcost",
   incomeBookingUrl: "https://tidycal.com/aqcroft/uwpresent",
 };
@@ -43,6 +43,7 @@ function buildPayload() {
     homeowner: getRadioValue(formData, "homeowner"),
     income: getRadioValue(formData, "income"),
     notes: String(formData.get("notes") || "").trim(),
+    website: String(formData.get("website") || "").trim(),
     source: "20k-giveaway",
   };
 }
