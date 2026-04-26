@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Enter the Utility Warehouse &pound;20K Giveaway Prize Draw and optionally request a savings review or extra income chat."
+    />
+    <title>&pound;20K Giveaway</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="brand-row">
+          <img src="assets/uw-logo-purple.svg" alt="Utility Warehouse" class="uw-logo" />
+        </div>
+
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Prize draw entry</p>
+            <h1 id="page-title">Enter the &pound;20K Giveaway</h1>
+            <p class="intro">
+              Add your details below to enter. You can also flag whether you are open to spending
+              less on essential home services or hearing about an extra income opportunity.
+            </p>
+          </div>
+
+          <div class="winnings-spot" aria-hidden="true">
+            <img src="assets/winnings-spot.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="service-strip" aria-label="Essential home services">
+        <div>
+          <img src="assets/energy-icon.svg" alt="" />
+          <span>Energy</span>
+        </div>
+        <div>
+          <img src="assets/broadband-icon.svg" alt="" />
+          <span>Broadband</span>
+        </div>
+        <div>
+          <img src="assets/mobile-icon.svg" alt="" />
+          <span>Mobile</span>
+        </div>
+      </section>
+
+      <form class="entry-form" id="entryForm" novalidate>
+        <label class="honeypot" for="website">Website</label>
+        <input class="honeypot" id="website" name="website" tabindex="-1" autocomplete="off" />
+
+        <section class="form-section" aria-labelledby="entry-heading">
+          <div class="section-heading">
+            <span aria-hidden="true">1</span>
+            <h2 id="entry-heading">Your prize draw entry</h2>
+          </div>
+
+          <label for="name">Full name</label>
+          <input id="name" required name="name" autocomplete="name" />
+
+          <label for="address">Address</label>
+          <textarea id="address" required name="address" rows="3" autocomplete="street-address"></textarea>
+
+          <div class="field-grid">
+            <div>
+              <label for="postcode">Postcode</label>
+              <input id="postcode" required name="postcode" autocomplete="postal-code" />
+            </div>
+
+            <div>
+              <label for="phone">Contact number</label>
+              <input id="phone" required name="phone" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+
+          <label for="email">Email address</label>
+          <input id="email" required name="email" type="email" autocomplete="email" />
+        </section>
+
+        <section class="form-section" aria-labelledby="extras-heading">
+          <div class="section-heading">
+            <span aria-hidden="true">2</span>
+            <h2 id="extras-heading">Optional extras</h2>
+          </div>
+
+          <fieldset>
+            <legend>Would you be open to seeing whether you could spend less on essential home services?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="savings" value="yes" /> Yes</label>
+              <label><input type="radio" name="savings" value="no" /> No</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Are you a homeowner?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="homeowner" value="yes" /> Yes</label>
+              <label><input type="radio" name="homeowner" value="no" /> No</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Would you be interested in hearing about an extra income opportunity?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="income" value="yes" /> Yes</label>
+              <label><input type="radio" name="income" value="no" /> No</label>
+            </div>
+          </fieldset>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Anything useful to add?"></textarea>
+        </section>
+
+        <details class="terms">
+          <summary>Terms and conditions</summary>
+          <p>
+            This entry is subject to the official UW &pound;20K Giveaway Prize Draw terms and conditions.
+            <a href="https://uw.co.uk/legal/terms-conditions/the-20k-giveaway-prize-draw" target="_blank" rel="noreferrer">
+              View the full terms
+            </a>.
+          </p>
+        </details>
+
+        <p class="form-message" id="formMessage" role="alert" hidden></p>
+
+        <button class="submit-button" id="submitButton" type="submit">Submit entry</button>
+      </form>
+
+      <div class="success-modal" id="successPanel" hidden>
+        <section class="success-panel" role="dialog" aria-modal="true" aria-labelledby="success-title">
+          <div class="confetti" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p class="eyebrow">Entry received</p>
+          <h2 id="success-title">You are in the draw!</h2>
+          <p>
+            Thanks, your &pound;20K Giveaway entry has been received. If you selected an optional
+            next step, you can book a quick chat below.
+          </p>
+          <div class="booking-actions" id="bookingActions"></div>
+          <button class="close-button" type="button" id="closeSuccess">Close</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
