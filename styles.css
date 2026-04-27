@@ -59,7 +59,7 @@ textarea {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 18px;
 }
 
 .eyebrow {
@@ -93,44 +93,18 @@ h2 {
   font-size: 1.02rem;
 }
 
-.winnings-pot {
-  position: relative;
-  display: grid;
-  justify-items: center;
-  justify-self: center;
-  align-self: center;
-  width: min(68vw, 250px);
+.hero-prize-image {
+  overflow: hidden;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 6px 6px 0 var(--pink);
 }
 
-.winnings-pot img {
+.hero-prize-image img {
+  display: block;
   width: 100%;
-}
-
-.winnings-pot::before {
-  content: "";
-  position: absolute;
-  left: 37.4%;
-  top: 51.1%;
-  width: 26%;
-  height: 6.9%;
-  background: #fffbe8;
-  border-radius: 40% 48% 45% 38%;
-  transform: rotate(-10deg);
-}
-
-.winnings-pot::after {
-  content: "Winnings";
-  position: absolute;
-  left: 35.2%;
-  top: 50.7%;
-  width: 31%;
-  color: var(--purple);
-  font-family: "Segoe Print", "Bradley Hand ITC", "Comic Sans MS", cursive;
-  font-size: clamp(0.62rem, 2.8vw, 0.84rem);
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  transform: rotate(-10deg);
+  height: auto;
 }
 
 .service-strip {
@@ -385,8 +359,6 @@ a {
   transform: rotate(-10deg);
 }
 
-
-
 .success-panel p:not(.eyebrow) {
   color: var(--muted);
 }
@@ -461,7 +433,7 @@ a {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.8fr);
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.82fr);
     align-items: center;
   }
 
