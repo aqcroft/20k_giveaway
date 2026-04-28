@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Enter the Utility Warehouse £20K Giveaway Prize Draw and optionally request a savings review or extra income chat."
+      content="Enter the Utility Warehouse &pound;20K Giveaway Prize Draw and optionally request a savings review or extra income chat."
     />
     <title>&pound;20K Giveaway</title>
     <link rel="stylesheet" href="styles.css" />
@@ -20,15 +20,22 @@
         <div class="hero-grid">
           <div>
             <p class="eyebrow">Prize draw entry</p>
-            <h1 id="page-title">Enter the &pound;20K Giveaway</h1>
+            <h1 id="page-title">Be in the draw for a chance to win</h1>
             <p class="intro">
-              Add your details below to enter. You can also flag whether you are open to spending
-              less on essential home services or hearing about an extra income opportunity.
+              Complete your details below to enter the &pound;20K Giveaway free prize draw. Let me
+              know if you would like to explore saving on essential home services or an extra income.
             </p>
+            <div class="partner-card">
+              <img src="assets/adrian-croft.jpg" alt="Adrian Croft" />
+              <div>
+                <strong>Adrian Croft</strong>
+                <span>Authorised UW Partner</span>
+              </div>
+            </div>
           </div>
 
           <div class="hero-prize-image">
-            <img src="assets/20k-giveaway-collage.webp" alt="Free Prize Draw £20K Giveaway" />
+            <img src="assets/20k-giveaway-collage.webp" alt="Free Prize Draw 20K Giveaway" />
           </div>
         </div>
       </section>
@@ -83,43 +90,47 @@
         <section class="form-section" aria-labelledby="extras-heading">
           <div class="section-heading">
             <span aria-hidden="true">2</span>
-            <h2 id="extras-heading">Optional extras</h2>
+            <h2 id="extras-heading">Would you like more information?</h2>
           </div>
 
-          <fieldset>
-            <legend>Would you be open to seeing whether you could spend less on essential home services?</legend>
+          <div class="info-options">
+            <label class="info-option">
+              <input type="checkbox" name="savings" value="yes" />
+              <span>
+                <strong>Saving on essential home services</strong>
+                <small>Energy, broadband, mobile</small>
+              </span>
+            </label>
+
+            <label class="info-option">
+              <input type="checkbox" name="income" value="yes" />
+              <span>
+                <strong>Extra income</strong>
+                <small>Alongside existing commitments</small>
+              </span>
+            </label>
+          </div>
+
+          <p class="consent-note">* You consent to Adrian contacting you about any options you select.</p>
+
+          <fieldset class="residential-status">
+            <legend>What is your residential status?</legend>
             <div class="choice-row">
-              <label><input type="radio" name="savings" value="yes" /> Yes</label>
-              <label><input type="radio" name="savings" value="no" /> No</label>
+              <label><input type="radio" name="residentialStatus" value="homeowner" required /> Homeowner</label>
+              <label><input type="radio" name="residentialStatus" value="tenant" required /> Tenant</label>
             </div>
           </fieldset>
-
-          <fieldset>
-            <legend>Are you a homeowner?</legend>
-            <div class="choice-row">
-              <label><input type="radio" name="homeowner" value="yes" /> Yes</label>
-              <label><input type="radio" name="homeowner" value="no" /> No</label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Would you be interested in hearing about an extra income opportunity?</legend>
-            <div class="choice-row">
-              <label><input type="radio" name="income" value="yes" /> Yes</label>
-              <label><input type="radio" name="income" value="no" /> No</label>
-            </div>
-          </fieldset>
-
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Anything useful to add?"></textarea>
         </section>
 
         <details class="terms">
           <summary>Terms and conditions</summary>
           <p>
-            This entry is subject to the official UW &pound;20K Giveaway Prize Draw terms and conditions.
+            Open to UK residents aged 18+. One entry per person. Entries must be completed by 31
+            August 2026. The prize draw will be held at Amplify 2026, by 31 October 2026, and
+            supervised by an independent person. One winner will be chosen at random. No purchase
+            necessary.
             <a href="https://uw.co.uk/legal/terms-conditions/the-20k-giveaway-prize-draw" target="_blank" rel="noreferrer">
-              View the full terms
+              Full T&amp;Cs apply
             </a>.
           </p>
         </details>
