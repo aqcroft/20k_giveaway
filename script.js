@@ -1,5 +1,5 @@
 const CONFIG = {
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbwO2qiDdBitoUVpHg_IfFEdgm0rVzRDlNipNC_9_PVPD-cGr46uwO8F_poWQR4BOJtE/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxnCvGSPlXvyc6amfr78xL52S4yNhLmV0gdC9x-41q931Gr-2QBr2FdswFnXLYMCfDj/exec",
   savingsBookingUrl: "https://tidycal.com/aqcroft/uwpresent",
   incomeBookingUrl: "https://tidycal.com/aqcroft/uwcost",
 };
@@ -29,6 +29,10 @@ function getRadioValue(formData, fieldName) {
   return formData.get(fieldName) || "";
 }
 
+function getCheckboxValue(formData, fieldName) {
+  return formData.get(fieldName) === "yes" ? "yes" : "no";
+}
+
 function buildPayload() {
   const formData = new FormData(form);
 
@@ -39,10 +43,9 @@ function buildPayload() {
     postcode: normalisePostcode(String(formData.get("postcode") || "")),
     phone: String(formData.get("phone") || "").trim(),
     email: String(formData.get("email") || "").trim(),
-    savings: getRadioValue(formData, "savings"),
-    homeowner: getRadioValue(formData, "homeowner"),
-    income: getRadioValue(formData, "income"),
-    notes: String(formData.get("notes") || "").trim(),
+    savings: getCheckboxValue(formData, "savings"),
+    residentialStatus: getRadioValue(formData, "residentialStatus"),
+    income: getCheckboxValue(formData, "income"),
     website: String(formData.get("website") || "").trim(),
     source: "20k-giveaway",
   };
@@ -53,8 +56,18 @@ function validatePayload(payload) {
     return "Please complete all required prize draw entry fields.";
   }
 
+  const phoneDigits = payload.phone.replace(/\D/g, "");
+
+  if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+    return "Please enter a valid contact number.";
+  }
+
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
     return "Please enter a valid email address.";
+  }
+
+  if (!payload.residentialStatus) {
+    return "Please select your residential status.";
   }
 
   return "";
@@ -83,6 +96,10 @@ function renderBookingActions(payload) {
 }
 
 async function submitEntry(payload) {
+  if (!CONFIG.appsScriptUrl) {
+    throw new Error("The form endpoint has not been configured yet.");
+  }
+
   await fetch(CONFIG.appsScriptUrl, {
     method: "POST",
     mode: "no-cors",
@@ -114,7 +131,7 @@ form.addEventListener("submit", async (event) => {
     successPanel.hidden = false;
     form.reset();
   } catch (error) {
-    showMessage("Something went wrong. Please try again.");
+    showMessage(error.message || "Something went wrong. Please try again.");
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = "Submit entry";
