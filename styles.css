@@ -47,8 +47,9 @@ textarea {
 .brand-row {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 24px;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .uw-logo {
@@ -96,16 +97,19 @@ h2 {
 .partner-card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 18px;
+  justify-content: flex-end;
+  gap: 9px;
+  min-width: 0;
+  text-align: right;
 }
 
 .partner-card img {
-  width: 58px;
-  height: 58px;
+  width: 46px;
+  height: 46px;
   border: 2px solid var(--line);
   border-radius: 50%;
   object-fit: cover;
+  flex: 0 0 46px;
 }
 
 .partner-card strong,
@@ -114,12 +118,16 @@ h2 {
 }
 
 .partner-card strong {
+  font-size: 0.88rem;
   font-weight: 900;
+  line-height: 1.1;
 }
 
 .partner-card span {
   color: var(--muted);
+  font-size: 0.72rem;
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .hero-prize-image {
