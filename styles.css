@@ -93,12 +93,39 @@ h2 {
   font-size: 1.02rem;
 }
 
+.partner-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.partner-card img {
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.partner-card strong,
+.partner-card span {
+  display: block;
+}
+
+.partner-card strong {
+  font-weight: 900;
+}
+
+.partner-card span {
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .hero-prize-image {
   overflow: hidden;
-  border: 2px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
-  box-shadow: 6px 6px 0 var(--pink);
 }
 
 .hero-prize-image img {
@@ -235,6 +262,53 @@ a:focus {
   width: 18px;
   min-height: 18px;
   margin: 0;
+}
+
+.info-options {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.info-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 58px;
+  margin: 0;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+}
+
+.info-option input {
+  width: 18px;
+  min-height: 18px;
+  margin: 3px 0 0;
+}
+
+.info-option span,
+.info-option strong,
+.info-option small {
+  display: block;
+}
+
+.info-option small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.consent-note {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.residential-status {
+  margin-bottom: 0;
 }
 
 .terms summary {
