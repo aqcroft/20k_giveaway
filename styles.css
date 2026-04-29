@@ -212,6 +212,18 @@ legend {
   font-weight: 800;
 }
 
+.required-mark {
+  color: var(--purple);
+  font-weight: 900;
+}
+
+.required-note {
+  margin: -2px 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
 fieldset {
   margin: 0 0 14px;
   padding: 0;
