@@ -47,7 +47,7 @@ function buildPayload() {
     townCity,
     address: [addressLine1, addressLine2, townCity].filter(Boolean).join(", "),
     postcode: normalisePostcode(String(formData.get("postcode") || "")),
-    phone: String(formData.get("phone") || "").trim(),
+  phone: String(formData.get("tel") || formData.get("phone") || "").trim(),
     email: String(formData.get("email") || "").trim(),
     savings: getCheckboxValue(formData, "savings"),
     residentialStatus: getRadioValue(formData, "residentialStatus"),
