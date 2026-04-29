@@ -1,5 +1,5 @@
 const CONFIG = {
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxnCvGSPlXvyc6amfr78xL52S4yNhLmV0gdC9x-41q931Gr-2QBr2FdswFnXLYMCfDj/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbwO2qiDdBitoUVpHg_IfFEdgm0rVzRDlNipNC_9_PVPD-cGr46uwO8F_poWQR4BOJtE/exec",
   savingsBookingUrl: "https://tidycal.com/aqcroft/uwpresent",
   incomeBookingUrl: "https://tidycal.com/aqcroft/uwcost",
 };
