@@ -26,7 +26,7 @@
 
         <div class="hero-grid">
           <div>
-            <h1 id="page-title">Be in the draw for a chance to win</h1>
+            <h1 id="page-title">Be in the draw for a chance to win!</h1>
             <p class="intro">
               Complete your details below to enter the &pound;20K Giveaway free prize draw. Let me
               know if you would like to explore saving on essential home services or an extra income.
@@ -67,23 +67,29 @@
           <label for="name">Full name</label>
           <input id="name" required name="name" autocomplete="name" />
 
-          <label for="address">Address</label>
-          <textarea id="address" required name="address" rows="3" autocomplete="street-address"></textarea>
+          <label for="addressLine1">Address line 1</label>
+          <input id="addressLine1" required name="addressLine1" autocomplete="address-line1" />
+
+          <label for="addressLine2">Address line 2</label>
+          <input id="addressLine2" name="addressLine2" autocomplete="address-line2" />
 
           <div class="field-grid">
+            <div>
+              <label for="townCity">Town / City</label>
+              <input id="townCity" required name="townCity" autocomplete="address-level2" />
+            </div>
+
             <div>
               <label for="postcode">Postcode</label>
               <input id="postcode" required name="postcode" autocomplete="postal-code" />
             </div>
-
-            <div>
-              <label for="phone">Contact number</label>
-              <input id="phone" required name="phone" type="tel" autocomplete="tel" />
-            </div>
           </div>
 
+          <label for="phone">Contact number</label>
+          <input id="phone" required name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+
           <label for="email">Email address</label>
-          <input id="email" required name="email" type="email" autocomplete="email" />
+          <input id="email" required name="email" type="email" inputmode="email" autocomplete="email" />
         </section>
 
         <section class="form-section" aria-labelledby="extras-heading">
