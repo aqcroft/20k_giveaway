@@ -35,11 +35,17 @@ function getCheckboxValue(formData, fieldName) {
 
 function buildPayload() {
   const formData = new FormData(form);
+  const addressLine1 = String(formData.get("addressLine1") || "").trim();
+  const addressLine2 = String(formData.get("addressLine2") || "").trim();
+  const townCity = String(formData.get("townCity") || "").trim();
 
   return {
     submittedAt: new Date().toISOString(),
     name: String(formData.get("name") || "").trim(),
-    address: String(formData.get("address") || "").trim(),
+    addressLine1,
+    addressLine2,
+    townCity,
+    address: [addressLine1, addressLine2, townCity].filter(Boolean).join(", "),
     postcode: normalisePostcode(String(formData.get("postcode") || "")),
     phone: String(formData.get("phone") || "").trim(),
     email: String(formData.get("email") || "").trim(),
@@ -52,7 +58,7 @@ function buildPayload() {
 }
 
 function validatePayload(payload) {
-  if (!payload.name || !payload.address || !payload.postcode || !payload.phone || !payload.email) {
+  if (!payload.name || !payload.addressLine1 || !payload.townCity || !payload.postcode || !payload.phone || !payload.email) {
     return "Please complete all required prize draw entry fields.";
   }
 
