@@ -120,6 +120,7 @@ h2 {
 .partner-card strong {
   font-size: 0.88rem;
   font-weight: 900;
+  white-space: nowrap;
   line-height: 1.1;
 }
 
