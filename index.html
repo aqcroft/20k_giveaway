@@ -64,10 +64,10 @@
             <h2 id="entry-heading">Your prize draw entry</h2>
           </div>
 
-          <label for="name">Full name</label>
+          <label for="name">Full name <span class="required-mark">*</span></label>
           <input id="name" required name="name" autocomplete="name" />
 
-          <label for="addressLine1">Address line 1</label>
+          <label for="addressLine1">Address line 1 <span class="required-mark">*</span></label>
           <input id="addressLine1" required name="addressLine1" autocomplete="address-line1" />
 
           <label for="addressLine2">Address line 2</label>
@@ -75,21 +75,23 @@
 
           <div class="field-grid">
             <div>
-              <label for="townCity">Town / City</label>
+              <label for="townCity">Town / City <span class="required-mark">*</span></label>
               <input id="townCity" required name="townCity" autocomplete="address-level2" />
             </div>
 
             <div>
-              <label for="postcode">Postcode</label>
+              <label for="postcode">Postcode <span class="required-mark">*</span></label>
               <input id="postcode" required name="postcode" autocomplete="postal-code" />
             </div>
           </div>
 
-          <label for="phone">Contact number</label>
+          <label for="phone">Contact number <span class="required-mark">*</span></label>
           <input id="phone" required name="phone" type="tel" inputmode="tel" autocomplete="tel" />
 
-          <label for="email">Email address</label>
+          <label for="email">Email address <span class="required-mark">*</span></label>
           <input id="email" required name="email" type="email" inputmode="email" autocomplete="email" />
+
+          <p class="required-note"><span class="required-mark">*</span> Required field</p>
         </section>
 
         <section class="form-section" aria-labelledby="extras-heading">
@@ -103,7 +105,7 @@
               <input type="checkbox" name="savings" value="yes" />
               <span>
                 <strong>Saving on essential home services</strong>
-                <small>Energy, broadband, mobile</small>
+                <small>Energy, broadband, mobile <span class="required-mark">*</span></small>
               </span>
             </label>
 
@@ -111,20 +113,21 @@
               <input type="checkbox" name="income" value="yes" />
               <span>
                 <strong>Extra income</strong>
-                <small>Alongside existing commitments</small>
+                <small>Alongside existing commitments <span class="required-mark">*</span></small>
               </span>
             </label>
           </div>
 
-          <p class="consent-note">* You consent to Adrian contacting you about the options you select.</p>
+          <p class="consent-note"><span class="required-mark">*</span> You consent to Adrian contacting you about the options you select.</p>
 
           <fieldset class="residential-status">
-            <legend>What is your residential status?</legend>
+            <legend>What is your residential status? <span class="required-mark">*</span></legend>
             <div class="choice-row">
               <label><input type="radio" name="residentialStatus" value="homeowner" required /> Homeowner</label>
               <label><input type="radio" name="residentialStatus" value="tenant" required /> Tenant</label>
             </div>
           </fieldset>
+          <p class="required-note"><span class="required-mark">*</span> Required field</p>
         </section>
 
         <details class="terms">
