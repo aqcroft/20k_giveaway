@@ -120,7 +120,6 @@ h2 {
 .partner-card strong {
   font-size: 0.88rem;
   font-weight: 900;
-  white-space: nowrap;
   line-height: 1.1;
 }
 
@@ -195,7 +194,7 @@ h2 {
   margin-bottom: 16px;
 }
 
-.section-heading span {
+.section-heading > span {
   display: grid;
   place-items: center;
   width: 34px;
@@ -216,6 +215,7 @@ legend {
 .required-mark {
   color: var(--purple);
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .required-note {
@@ -328,8 +328,13 @@ a:focus {
   font-weight: 700;
 }
 
-.residential-status {
+.residential-status,
+.uw-status {
   margin-bottom: 0;
+}
+
+.residential-status + .uw-status {
+  margin-top: 14px;
 }
 
 .terms summary {
