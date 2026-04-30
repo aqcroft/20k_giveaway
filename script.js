@@ -1,5 +1,5 @@
 const CONFIG = {
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbwO2qiDdBitoUVpHg_IfFEdgm0rVzRDlNipNC_9_PVPD-cGr46uwO8F_poWQR4BOJtE/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxnCvGSPlXvyc6amfr78xL52S4yNhLmV0gdC9x-41q931Gr-2QBr2FdswFnXLYMCfDj/exec",
   savingsBookingUrl: "https://tidycal.com/aqcroft/uwpresent",
   incomeBookingUrl: "https://tidycal.com/aqcroft/uwcost",
 };
@@ -47,10 +47,11 @@ function buildPayload() {
     townCity,
     address: [addressLine1, addressLine2, townCity].filter(Boolean).join(", "),
     postcode: normalisePostcode(String(formData.get("postcode") || "")),
-  phone: String(formData.get("tel") || formData.get("phone") || "").trim(),
+    phone: String(formData.get("tel") || formData.get("phone") || "").trim(),
     email: String(formData.get("email") || "").trim(),
     savings: getCheckboxValue(formData, "savings"),
     residentialStatus: getRadioValue(formData, "residentialStatus"),
+    existingCustomer: getRadioValue(formData, "existingCustomer"),
     income: getCheckboxValue(formData, "income"),
     website: String(formData.get("website") || "").trim(),
     source: "20k-giveaway",
@@ -74,6 +75,10 @@ function validatePayload(payload) {
 
   if (!payload.residentialStatus) {
     return "Please select your residential status.";
+  }
+
+  if (!payload.existingCustomer) {
+    return "Please select whether you are already with Utility Warehouse.";
   }
 
   return "";
