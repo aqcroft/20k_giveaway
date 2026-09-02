@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Enter the Utility Warehouse &pound;20K Giveaway Prize Draw and optionally request a savings review or extra income chat."
+    />
+    <title>&pound;20K Giveaway</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Site font: Barlow Semi Condensed for all visitors (consistent across platforms) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="profile-bubble" id="profileBubble">
+        <button class="profile-bubble-btn" id="profileBubbleBtn" type="button"
+                aria-expanded="false" aria-controls="profileBubbleMenu" aria-label="Contact Adrian">
+          <img src="assets/adrian-croft.jpg" alt="Adrian Croft" />
+        </button>
+        <div class="profile-bubble-menu" id="profileBubbleMenu" role="menu" hidden>
+          <div class="profile-bubble-head">
+            <strong>Adrian Croft</strong>
+            <span>UW Authorised Partner</span>
+          </div>
+          <a role="menuitem" href="https://tidycal.com/aqcroft/uwpresent" target="_blank" rel="noreferrer">Book a chat</a>
+          <a role="menuitem" href="https://wa.me/447787400800" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a role="menuitem" href="tel:+447787400800">Call</a>
+          <a role="menuitem" href="mailto:adrian.croft@uw.partners">Email</a>
+        </div>
+      </div>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="brand-row">
+          <img src="assets/uw-logo-purple.svg" alt="Utility Warehouse" class="uw-logo" />
+          <div class="partner-card">
+            <div>
+              <strong>Adrian Croft</strong>
+              <span>Authorised UW Partner</span>
+            </div>
+            <img src="assets/adrian-croft.jpg" alt="Adrian Croft" />
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <div>
+            <h1 id="page-title">Be in the draw for a chance to win!</h1>
+            <p class="intro">
+              You came here for a chance to win &pound;20,000, and you should absolutely take it.
+              Complete your details below, and good luck.
+            </p>
+          </div>
+
+          <div class="hero-prize-image">
+            <img src="assets/20k-giveaway-collage.webp" alt="Free Prize Draw 20K Giveaway" />
+          </div>
+        </div>
+      </section>
+
+      <section class="service-strip" aria-label="Essential home services">
+        <div>
+          <img src="assets/energy-icon.svg" alt="" />
+          <span>Energy</span>
+        </div>
+        <div>
+          <img src="assets/broadband-icon.svg" alt="" />
+          <span>Broadband</span>
+        </div>
+        <div>
+          <img src="assets/mobile-icon.svg" alt="" />
+          <span>Mobile</span>
+        </div>
+      </section>
+
+      <section class="uw-context about-uw" aria-label="About the prize and Utility Warehouse">
+        <p>
+          Worth knowing where the prize comes from, though. It's Utility Warehouse, who bring your
+          home essentials onto a single bill: energy, broadband, mobile, insurance, and a Cashback
+          Card that earns you money back on the everyday shop. A bit like a meal deal for your home:
+          bundle a few essentials and it works out better than buying them one by one. Most people
+          end up saving a fair bit, with a lot less faff.
+        </p>
+        <p>
+          I'm Adrian, a Utility Warehouse Authorised Partner, and I've been with them since 2011,
+          first as a customer and then a partner. It's honestly the best move I've made: work that
+          fits around my family, on my own terms.
+        </p>
+      </section>
+
+      <form class="entry-form" id="entryForm" autocomplete="on" novalidate>
+        <label class="honeypot" for="website">Website</label>
+        <input class="honeypot" id="website" name="website" tabindex="-1" autocomplete="off" />
+
+        <section class="form-section" aria-labelledby="entry-heading">
+          <div class="section-heading">
+            <span aria-hidden="true">1</span>
+            <h2 id="entry-heading">Your prize draw entry</h2>
+          </div>
+
+          <label for="name">Full name <span class="required-mark">*</span></label>
+          <input id="name" required name="name" autocomplete="name" />
+
+          <label for="addressLine1">Address line 1 <span class="required-mark">*</span></label>
+          <input id="addressLine1" required name="addressLine1" autocomplete="address-line1" />
+
+          <label for="addressLine2">Address line 2</label>
+          <input id="addressLine2" name="addressLine2" autocomplete="address-line2" />
+
+          <div class="field-grid">
+            <div>
+              <label for="townCity">Town / City <span class="required-mark">*</span></label>
+              <input id="townCity" required name="townCity" autocomplete="address-level2" />
+            </div>
+
+            <div>
+              <label for="postcode">Postcode <span class="required-mark">*</span></label>
+              <input id="postcode" required name="postcode" autocomplete="postal-code" />
+            </div>
+          </div>
+
+          <label for="tel">Contact number <span class="required-mark">*</span></label>
+          <input id="tel" required name="tel" type="tel" inputmode="tel" autocomplete="tel" />
+
+          <label for="email">Email address <span class="required-mark">*</span></label>
+          <input id="email" required name="email" type="email" inputmode="email" autocomplete="email" />
+
+        </section>
+
+        <section class="form-section" aria-labelledby="extras-heading">
+          <div class="section-heading">
+            <span aria-hidden="true">2</span>
+            <h2 id="extras-heading">Would you like more information?</h2>
+          </div>
+
+          <div class="about-uw">
+            <p>
+              Here's the gentle nudge. You're happy to take a chance on &pound;20k. Maybe you're also
+              open to something that isn't left to chance, whether that's saving on your essentials or
+              earning a little alongside everything else.
+            </p>
+            <p>
+              No pressure either way. Tick below if any of it interests you and I'll be in touch. I
+              won't add you to any lists.
+            </p>
+          </div>
+
+          <div class="info-options">
+            <label class="info-option">
+              <input type="checkbox" name="savings" value="yes" />
+              <span>
+                <strong>Saving on essential home services</strong>
+                <small>Energy, broadband, mobile</small>
+              </span>
+            </label>
+
+            <label class="info-option">
+              <input type="checkbox" name="income" value="yes" />
+              <span>
+                <strong>Extra income</strong>
+                <small>Alongside existing commitments</small>
+              </span>
+            </label>
+          </div>
+
+          <p class="consent-note"><strong>Note:</strong> You consent to Adrian contacting you about the options you select.</p>
+
+          <fieldset class="residential-status">
+            <legend>What is your residential status? <span class="required-mark">*</span></legend>
+            <div class="choice-row">
+              <label><input type="radio" name="residentialStatus" value="homeowner" required /> Homeowner</label>
+              <label><input type="radio" name="residentialStatus" value="tenant" required /> Tenant</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="uw-status">
+            <legend>Are you already with Utility Warehouse? <span class="required-mark">*</span></legend>
+            <div class="choice-row">
+              <label><input type="radio" name="existingCustomer" value="yes" required /> Yes</label>
+              <label><input type="radio" name="existingCustomer" value="no" required /> No</label>
+            </div>
+          </fieldset>
+          <p class="required-note"><span class="required-mark">*</span> Required field</p>
+        </section>
+
+        <details class="terms">
+          <summary>Terms and conditions</summary>
+          <p>
+            Open to UK residents aged 18+. One entry per person. Entries must be completed by 31
+            August 2027. The prize draw will be held at Amplify 2027, by 31 October 2027, and
+            supervised by an independent person. One winner will be chosen at random. No purchase
+            necessary.
+            <a href="https://uw.co.uk/legal/terms-conditions/the-20k-giveaway-prize-draw" target="_blank" rel="noreferrer">
+              Full T&amp;Cs apply
+            </a>.
+          </p>
+        </details>
+
+        <p class="form-message" id="formMessage" role="alert" hidden></p>
+
+        <button class="submit-button" id="submitButton" type="submit">Submit entry</button>
+      </form>
+
+      <div class="success-modal" id="successPanel" hidden>
+        <section class="success-panel" role="dialog" aria-modal="true" aria-labelledby="success-title">
+          <div class="confetti" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="success-pot" aria-hidden="true">
+            <img src="assets/winnings-pot.svg" alt="" />
+          </div>
+          <p class="eyebrow" id="successEyebrow">Thank you</p>
+          <h2 id="success-title">I'll be in touch</h2>
+          <p id="successBody">
+            Thanks for entering the &pound;20K Giveaway. I'll get your entry confirmed and come
+            back to you shortly.
+          </p>
+          <div class="booking-actions" id="bookingActions"></div>
+          <button class="close-button" type="button" id="closeSuccess">Close</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
