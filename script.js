@@ -128,14 +128,14 @@ function renderOutcome(payload) {
       setSuccess(
         "Thank you",
         "Thanks for that",
-        "One thing to flag: the \u00A320K Giveaway is open to new customers only, so as an existing UW customer you're not in this draw. But you ticked extra income, and that's a conversation I'd genuinely like to have. Grab a time below whenever suits."
+        "One thing to flag: existing UW customers aren't eligible for the \u00A320K Giveaway, so you're not in this draw. But you ticked extra income, and that's a conversation I'd genuinely like to have. Grab a time below whenever suits."
       );
       bookingActions.insertAdjacentHTML("beforeend", actionLink(CONFIG.incomeBookingUrl, "Book an extra income chat", true));
     } else {
       setSuccess(
         "Thank you",
         "Thanks for that",
-        "One thing to flag: the \u00A320K Giveaway is open to new customers only, so as an existing UW customer you're not in this draw. No harm done. Since you're already with UW though, I'm always happy to run a quick refresher and make sure you're getting the most from it."
+        "One thing to flag: existing UW customers aren't eligible for the \u00A320K Giveaway, so you're not in this draw. No harm done. Since you're already with UW though, I'm always happy to run a quick refresher and make sure you're getting the most from it."
       );
       bookingActions.insertAdjacentHTML("beforeend", actionLink(CONFIG.refresherBookingUrl, "Book a UW refresher", false));
     }
